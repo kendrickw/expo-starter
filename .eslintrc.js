@@ -9,6 +9,7 @@ module.exports = {
     'plugin:import/typescript',
   ],
   rules: {
+    'arrow-body-style': 'off',
     'no-unused-vars': 'off',
     'react/jsx-filename-extension': [
       1,
