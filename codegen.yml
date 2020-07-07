@@ -1,0 +1,23 @@
+overwrite: true
+schema: 'graphql/*.graphql'
+documents:
+  - 'graphql/query-mutation/**/*.ts*'
+generates:
+  graphql/generated/server.ts:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-resolvers'
+  graphql/generated/client.ts:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-react-apollo'
+    config:
+      withHOC: false
+      withHooks: true
+      withComponent: false
+      withMutationFn: false
+  graphql/generated/fragmentTypes.json:
+    plugins:
+      - 'fragment-matcher'
